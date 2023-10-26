@@ -43,5 +43,7 @@ func (c *StartCmd) Execute(ctx context.Context, f *flag.FlagSet, args ...interfa
 		}
 		config.LogSuccess("Successfully downloaded server jar.")
 	}
+
+	//todo: start server
 	return subcommands.ExitSuccess
 }
