@@ -8,7 +8,7 @@ DIST_DIR="$PROJECT_DIR/dist"
 cd "$PROJECT_DIR"
 
 # フラグを解析する
-while getopts ":cfd" opt; do
+while getopts ":cfd:rh" opt; do
   case $opt in
     c)
       # -cフラグが指定された場合、distフォルダ内のファイルを全て削除する
@@ -21,6 +21,22 @@ while getopts ":cfd" opt; do
     d)
       # -dフラグが指定された場合、デバッグビルドを行う
       DEBUG_BUILD=true
+      ;;
+    r)
+      # -rフラグが指定された場合、distフォルダに移動して成果物を実行する
+      cd "$DIST_DIR"
+      ./"$APP_NAME"
+      exit 0
+      ;;
+    h)
+      # -hフラグが指定された場合、ヘルプを表示する
+      echo "Usage: build.sh [-c] [-f] [-d] [-r] [-h]"
+      echo "  -c: Clear the dist directory before building"
+      echo "  -f: Force a rebuild even if a binary already exists"
+      echo "  -d: Build a debug version of the binary"
+      echo "  -r: Build and run the binary from the dist directory"
+      echo "  -h: Show this help message"
+      exit 0
       ;;
     \?)
       # 不正なフラグが指定された場合、エラーメッセージを表示する
