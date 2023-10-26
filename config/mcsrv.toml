@@ -1,0 +1,15 @@
+[server]
+  # server name
+  # paper, waterfall, velocity
+  name = "paper"
+  # server version
+  # specified version, latest
+  version = "1.20.2"
+  # jvm memory
+  max_memory = 1024
+  min_memory = 1024
+[server.restart]
+  # restart server
+  enable = false
+  # restart time
+  time = ["06:00", "15:00"]

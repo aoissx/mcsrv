@@ -2,4 +2,11 @@ module github.com/aoissx/mcsrv
 
 go 1.21.3
 
-require github.com/google/subcommands v1.2.0 // indirect
+require (
+	github.com/BurntSushi/toml v1.3.2 // indirect
+	github.com/fatih/color v1.15.0 // indirect
+	github.com/google/subcommands v1.2.0 // indirect
+	github.com/mattn/go-colorable v0.1.13 // indirect
+	github.com/mattn/go-isatty v0.0.17 // indirect
+	golang.org/x/sys v0.6.0 // indirect
+)
