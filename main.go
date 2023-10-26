@@ -15,6 +15,8 @@ func init() {
 
 	// init command
 	subcommands.Register(&subcmd.InitCmd{}, "")
+	// start command
+	subcommands.Register(&subcmd.StartCmd{}, "")
 	flag.Parse()
 }
 

@@ -1,3 +1,6 @@
+##################################################
+# server config
+##################################################
 [server]
   # server name
   # paper, waterfall, velocity
@@ -8,6 +11,12 @@
   # jvm memory
   max_memory = 1024
   min_memory = 1024
+
+[server.eula]
+  # eula
+  # true, false
+  eula = true
+
 [server.restart]
   # restart server
   enable = false

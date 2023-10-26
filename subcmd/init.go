@@ -36,9 +36,6 @@ func (c *InitCmd) Execute(ctx context.Context, f *flag.FlagSet, args ...interfac
 		return subcommands.ExitFailure
 	}
 
-	// show
-	config.ShowConfig()
-
 	config.LogSuccess("Successfully created config file.")
 	return subcommands.ExitSuccess
 }
